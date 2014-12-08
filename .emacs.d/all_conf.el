@@ -43,7 +43,7 @@
 (setq x-select-enable-clipboard t)
 
 ;; show line limit
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/column-marker"))
+(load (expand-file-name "~/.emacs.d/column-marker.el"))
 (require 'column-marker)
 
 (add-hook 'javascript-mode-hook (lambda () (interactive) (column-marker-3 79)))
@@ -103,5 +103,5 @@
 (global-set-key (kbd "C-c <down>")  'windmove-down)
 
 ;; eng => ru
-(load "eik")
+(load (expand-file-name "~/.emacs.d/eik.el"))
 (global-set-key [f9] 'eik/tr)

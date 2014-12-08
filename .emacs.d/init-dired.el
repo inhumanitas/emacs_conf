@@ -1,3 +1,5 @@
+(load (expand-file-name "~/.emacs.d/dired-details.el"))
+(load (expand-file-name "~/.emacs.d/dired+.el"))
 (require 'dired-details)
 (dired-details-install)
 

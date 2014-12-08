@@ -2,6 +2,8 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/home/morose/work/" . "git/")
+ ("/home/morose/" . ".emacs.d/")
  ("/home/valiullin/.emacs.d/" . "auto-save-list/")
  ("/su:" . ":/")
  ("/usr/lib/python2.7/site-packages/django/contrib/" . "auth/")
@@ -23,6 +25,9 @@
 
 ;; ----- ido-work-directory-list -----
 (
+ "/home/morose/.emacs.d/"
+ "/home/morose/"
+ "/home/morose/work/git/"
  "/home/valiullin/.emacs.d/"
  "/home/valiullin/work/web_bb/src/web_bb/"
  "/home/valiullin/"
@@ -40,6 +45,9 @@
 
 ;; ----- ido-work-file-list -----
 (
+ "dired_conf.el"
+ ".emacs"
+ ".#generators.py"
  "jabber-conf.el"
  "main-conf.el"
  "eik.el"
@@ -47,13 +55,20 @@
  "ido-conf.el"
  "emacs-conf.el"
  "manage.py"
- ".emacs"
- "helpers.txt"
- "__init__.py"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("/home/morose/.emacs.d/" (21637 55537 346666 276000) "ido/" "ido_conf.el" "jabber_conf.el" "copy_buffer_name.el" "all_conf.el~" "all_conf.el" "dired_conf.el" "../" "./" "init-dired.el" "notify.el" "eik.el" "dired-details.el" "history" "column-marker.el" ".emacs.desktop" ".#session.106e6768f5a610b14e141758229869007100000039780042" "auto-save-list/" "dired+.el" ".emacs.desktop.lock" "emacs-jabber/" "python_conf.el" "session.106e6768f5a610b14e141758278522889700000039780051")
+
+ ("/home/morose/" (21637 55572 121447 448000) ".gnome2/" ".gnome/" "Downloads/" "Шаблоны/" ".cache/" ".ICEauthority" ".local/" ".gnupg/" ".config/" "bar.py" "testdisk.log" ".emacs~" ".gnome2_private/" ".elementary/" "Рабочий стол/" ".mozilla/" ".bash_profile" "Изображения/" "Видео/" ".emacs.d/" ".pki/" "../" "Документы/" ".rcc/" "./" "work/" ".bash_logout" ".ipython/" "Загрузки/" ".emacs" ".bashrc" ".macromedia/" "bar/" ".esd_auth" ".shutter/" "Музыка/" ".adobe/" ".e/" "Общедоступные/" ".ssh/" ".bash_history")
+
+ ("/home/morose/work/git/" (21637 54503 414986 997000) ".elementary/" "../" "./" ".#generators.py" "qs_chunked.py")
+
+ ("/home/morose/work/git/.elementary/config/" (21635 4082 0 0) "../" "./" "standard/" "profile.cfg")
+
+ ("/home/morose/work/" (21630 39133 637575 200000) "../" "./" "git/")
+
  ("/home/valiullin/.emacs.d/" (21628 1711 169297 627000) "./" "ido-conf.el" "dired-conf.el" "column-marker.el" ".emacs.desktop" "eik.el" "ido/" "history" "../" "emacs-jabber/" "python_conf.el" "jabber-avatar-cache/" "notify.el" "dired+.el" "main-conf.el" "jabber-conf.el" "copy-buffer-name.el" "dired-details.el" ".emacs.desktop.lock" "init-dired.el" "mail-conf.el")
 
  ("/home/valiullin/" (21628 1699 427519 32000) "output/" ".pgadmin3" "Anketa_dlya_avtorov.doc" "README" ".gstreamer-0.10/" "ORDER_T6_27e1e71e.xlsx" "REQUIREMENTS" "1.rar" "./" ".zcompdump" "temp.html" "28.111.jpg" "8.png" "86819m.png" "1/" "Snapshots/" "LICENSE" ".emacs~" ".qt/" ".gimp-2.8/" "Music/" "Programmirovanie_na_Visual_Basic.docx" ".bash_history" "doctests/" ".yjp/" "scripts/" ".ICEauthority" "error2.jpg" "src/" ".emacs.d/" "tor-browser_en-US/" "Audiobooks/" "Podcasts/" ".emacs-places" ".zshrc" "../" ".yandex/" "123" ".pip/" ".gnupg/" ".java/" "write_version.py" "ТЗ Хасимова.docx" "Desktop/" "builder.py" ".Skype/" ".bashrc" ".freerdp/" "setup.py" "pgadmin.log" ".esd_auth" "Templates/" ".macromedia/" "Downloads/" "VirtualBox VMs/" ".bash_profile" ".mozilla/" ".designer/" ".eric5/" ".pki/" ".wine/" "error1.jpg" ".purple/" "ORDER_T6_6aa4016f.xlsx" ".vidalia/" ".gnome2/" ".leechcraft/" "data/" "pass" ".adobe/" ".ssh/" ".thumbnails/" "error1.1.jpg" "2.png" ".viminfo" ".cache/" ".bash_logout" "Абожик.png" ".qsci/" "java_pid12066.hprof" "MANIFEST.in" ".emacs" ".gnome2_private/" ".histfile" "Pictures/" "IMG_25112014_214217.png" ".gnome/" ".config/" ".Skype_/" ".tor/" ".gtkrc-2.0" "111" ".emacs (copy).d/" ".color/" "work/" ".dreampie" "configs/" ".flush/" "Documents/" "Videos/" ".cups/" ".hgrc" "Public/" ".PyCharm40/" ".local/" "PycharmProjects/" ".PyCharm30/" ".~lock.База данных ВКМ-Сталь(основа)3_be.accdb#" ".remmina/" ".pgpass" ".pgadmin_histoqueries" "docs/")

@@ -105,3 +105,7 @@
 ;; eng => ru
 (load (expand-file-name "~/.emacs.d/eik.el"))
 (global-set-key [f9] 'eik/tr)
+
+;; create the autosave dir if necessary, since emacs won't.
+(make-directory "/tmp/emacs/" t)
+(add-to-list 'backup-directory-alist (cons ".*" "/tmp/emacs"))

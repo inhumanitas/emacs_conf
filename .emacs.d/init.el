@@ -1,22 +1,3 @@
-;; fullscreen
-(custom-set-variables
- '(initial-frame-alist (quote ((fullscreen . maximized)))))
-
-;; colors
-(set-background-color "gray90")
-(set-foreground-color "black")
-(global-hl-line-mode t)
-(set-face-background 'hl-line "gray83")
-
-(defun fontify-frame (frame)
-  (set-frame-parameter frame 'font "Monospace-10"))
-
-;; tool bar
-(tool-bar-mode -1)
-
-;; menu bar
-(menu-bar-mode -1)
-
 (desktop-save-mode 1)
 
 ;;Save minibuffer history
@@ -29,34 +10,45 @@
 (show-paren-mode t)
 (setq show-paren-style 'expression)
 
-;; lines and rows number show
-(require 'linum)
-(linum-mode 1)
-(global-linum-mode)
-(column-number-mode 1)
-
-;; region deleted by del
-(delete-selection-mode 1)
-
 ;; tab
 (setq default-tab-width 4)
-(setq x-select-enable-clipboard t)
 
 ;; show line limit
-;;(load (expand-file-name "~/.emacs.d/column-marker.el"))
 (require 'column-marker)
 
 (add-hook 'javascript-mode-hook (lambda () (interactive) (column-marker-3 79)))
 (add-hook 'python-mode-hook (lambda () (interactive) (column-marker-3 79)))
 
-
-;; after save events
+;; No need for ~ files when editing
+(setq create-lockfiles nil)
 
 ;;; убивать пробелы в конце строк
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 ;;; замена табов пробелами
 (add-hook 'before-save-hook '(lambda () (untabify (point-min) (point-max))))
 
+;; create the autosave dir if necessary, since emacs won't.
+(make-directory "/tmp/emacs/" t)
+(add-to-list 'backup-directory-alist (cons ".*" "/tmp/emacs"))
+
+;; comments
+(defun toggle-comment-on-line ()
+"comment or uncomment current line"
+(interactive)
+(comment-or-uncomment-region (line-beginning-position) (line-end-position)))
+(global-set-key (kbd "C-;") 'toggle-comment-on-line)
+
+;; Go straight to scratch buffer on startup
+(setq inhibit-startup-message t)
+
+
+;; When you visit a file, point goes to the last place where it
+;; was when you previously visited the same file.
+;; http://www.emacswiki.org/emacs/SavePlace
+(require 'saveplace)
+(setq-default save-place t)
+;; keep track of saved places in ~/.emacs.d/places
+(setq save-place-file (concat user-emacs-directory "places"))
 
 ;; language bindings
 (setq auto-mode-alist
@@ -104,6 +96,9 @@
 (global-set-key (kbd "C-c <up>")    'windmove-up)
 (global-set-key (kbd "C-c <down>")  'windmove-down)
 
-;; create the autosave dir if necessary, since emacs won't.
-(make-directory "/tmp/emacs/" t)
-(add-to-list 'backup-directory-alist (cons ".*" "/tmp/emacs"))
+;; Interactive search key bindings. By default, C-s runs
+;; isearch-forward, so this swaps the bindings.
+(global-set-key (kbd "C-s") 'isearch-forward-regexp)
+(global-set-key (kbd "C-r") 'isearch-backward-regexp)
+(global-set-key (kbd "C-M-s") 'isearch-forward)
+(global-set-key (kbd "C-M-r") 'isearch-backward)

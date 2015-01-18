@@ -3,5 +3,6 @@ ido
 auto-save-list
 elpa
 history
+places
 *.desktop
 *.lock

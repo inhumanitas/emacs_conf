@@ -43,7 +43,7 @@
 (setq x-select-enable-clipboard t)
 
 ;; show line limit
-(load (expand-file-name "~/.emacs.d/column-marker.el"))
+;;(load (expand-file-name "~/.emacs.d/column-marker.el"))
 (require 'column-marker)
 
 (add-hook 'javascript-mode-hook (lambda () (interactive) (column-marker-3 79)))
@@ -94,17 +94,15 @@
 (global-set-key [?\C-ж] 'kill-this-buffer)
 
 (global-set-key [f8] 'linum-mode)
-(global-set-key [f11] 'ibuffer)
+;; eng => ru
+(global-set-key [f9] 'eik/tr)
 (global-set-key [f10] 'bookmark-bmenu-list)
+(global-set-key [f11] 'ibuffer)
 
 (global-set-key (kbd "C-c <left>")  'windmove-left)
 (global-set-key (kbd "C-c <right>") 'windmove-right)
 (global-set-key (kbd "C-c <up>")    'windmove-up)
 (global-set-key (kbd "C-c <down>")  'windmove-down)
-
-;; eng => ru
-(load (expand-file-name "~/.emacs.d/eik.el"))
-(global-set-key [f9] 'eik/tr)
 
 ;; create the autosave dir if necessary, since emacs won't.
 (make-directory "/tmp/emacs/" t)

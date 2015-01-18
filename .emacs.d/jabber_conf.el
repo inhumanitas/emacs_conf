@@ -1,5 +1,4 @@
 ;; jabber
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/emacs-jabber/"))
 (require 'jabber)
 ;;(require 'jabber-autoloads)
 

@@ -1,6 +1,7 @@
 *~
-history
 ido
 auto-save-list
+elpa
+history
 *.desktop
 *.lock

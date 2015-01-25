@@ -1,6 +1,7 @@
 ;; The packages you want installed. You can also install these
 ;; manually with M-x package-install
 ;; Add in your own as you wish:
+
 (defvar packages-for-install
   '(;; Multiple cursors for Emacs.
     multiple-cursors
@@ -28,6 +29,14 @@
     jabber
     ;; Notification support
     notify
+    magit
+    python
+    ipython
+    python-pylint
+    flymake-cursor
+    flymake-python-pyflakes
+    anything
+    ac-html-bootstrap
     ))
 
 (dolist (package packages-for-install)

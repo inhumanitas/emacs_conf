@@ -1,5 +1,5 @@
 (require 'python)
-(require 'python-mode)
+;;(require 'python-mode)
 
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
@@ -42,6 +42,22 @@
   (highlight-regexp "pdb.set_trace()")
 )
 
+(defun py-newline-and-indent ()
+    "Strives to act like the Emacs newline-and-indent.
+    This is just `strives to' because correct indentation can't be computed
+    from scratch for Python code. In general, deletes the whitespace before
+    point, inserts a newline, and takes an educated guess as to how you want
+    the new line indented."
+    (interactive)
+    (let ( (ci (current-indentation)) )
+    (if (or (< ci (current-column)) ; if point is beyond indentation
+        (looking-at "[ \t]*$")) ; or line is empty
+        (newline-and-indent)
+        ;; else try to act like newline-and-indent "normally" acts
+        (beginning-of-line)
+        (insert-char ?\n 1)
+    (move-to-column ci))))
+
 (add-hook 'python-mode-hook 'annotate-pdb)
 (defun python-add-breakpoint ()
   (interactive)
@@ -55,7 +71,7 @@
 ;; Load pylint and flake8 addition:
 
 (require 'python-pylint)
-(require 'python-flake8)
+;;(require 'python-flake8)
 
 (require 'flymake)
 (setq flymake-no-changes-timeout 3)

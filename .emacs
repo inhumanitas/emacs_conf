@@ -15,6 +15,8 @@
 
 (load (expand-file-name "~/.emacs.d/dired_conf.el"))
 
+(load (expand-file-name "~/.emacs.d/python_conf.el"))
+
 (load (expand-file-name "~/.emacs.d/eik.el"))
 
 ;;

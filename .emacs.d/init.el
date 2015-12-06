@@ -50,6 +50,15 @@
 ;; keep track of saved places in ~/.emacs.d/places
 (setq save-place-file (concat user-emacs-directory "places"))
 
+;; Save all when emacs lost focus
+(defun save-all ()
+  (interactive)
+  (save-some-buffers t))
+(add-hook 'focus-out-hook 'save-all)
+
+;; RFringe
+(require 'rfringe)
+
 ;; language bindings
 (setq auto-mode-alist
       (append
@@ -74,6 +83,7 @@
          ( "\\.mac$". xbase-mode)
          ( "\\.f2r$". xbase-mode)
          ( "\\.erl$". erlang-mode)
+         ( "\\.rst$". rst-mode)
         )
     )
 )

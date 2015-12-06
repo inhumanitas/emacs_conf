@@ -37,7 +37,10 @@
     flymake-python-pyflakes
     anything
     ac-html-bootstrap
-    ))
+    neotree
+    rfringe
+    )
+  )
 
 (dolist (package packages-for-install)
   (when (not (package-installed-p package))
